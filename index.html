@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verifactu para Magento 2 · Normaro</title>
+  <meta name="description" content="Módulo gratuito y de código abierto para Magento 2: envía las facturas y notas de crédito a Quaderno, proveedor certificado de Verifactu, y guarda en Magento el número de factura, el PDF y el enlace de verificación de la AEAT.">
+  <link rel="canonical" href="https://normaro.es/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/">normaro<span>.</span></a>
+      <nav><a href="https://github.com/normaro/magento-verifactu">GitHub</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <p class="eyebrow">Módulo para Magento 2 · gratuito · código abierto</p>
+      <h1>Verifactu para Magento&nbsp;2</h1>
+      <p class="lead">Envía cada factura y nota de crédito de Magento a Quaderno, proveedor certificado
+        de Verifactu, y guarda en Magento el número de factura, el PDF y el enlace de verificación
+        (QR) de la AEAT.</p>
+      <div class="actions">
+        <a class="button" href="https://github.com/normaro/magento-verifactu">Ver en GitHub</a>
+        <code class="cmd">composer require normaro/module-verifactu</code>
+      </div>
+    </div>
+
+    <section id="plazos">
+      <h2>Plazos</h2>
+      <p>Según el <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2025-24446">Real Decreto-ley
+        15/2025</a>, Verifactu es obligatorio desde el <strong>1 de enero de 2027</strong> para los
+        contribuyentes del Impuesto sobre Sociedades y desde el <strong>1 de julio de 2027</strong>
+        para el resto, incluidos los autónomos.</p>
+      <div class="note">
+        <p>El 5 de octubre de 2026 el Ministerio de Hacienda
+          <a href="https://www.infobae.com/espana/agencias/2026/10/05/hacienda-retrasa-verifactu-hasta-2028-para-alinearlo-con-la-factura-electronica/">anunció</a>
+          un aplazamiento a octubre de 2028. Mientras no se publique en el BOE, las fechas vigentes
+          son las de 2027.</p>
+      </div>
+    </section>
+
+    <section id="que-hace">
+      <h2>Qué hace</h2>
+      <ul>
+        <li><strong>Factura de Magento → factura completa o factura simplificada</strong> en Quaderno,
+          con el IVA desglosado por tipos, el NIF y la dirección del cliente. Ventas B2B en la UE
+          con NIF-IVA.</li>
+        <li><strong>Nota de crédito de Magento → factura rectificativa</strong> vinculada a la
+          factura original.</li>
+        <li><strong>Cola y reintentos.</strong> El envío no frena el pedido ni el panel: si Quaderno
+          no responde, el módulo vuelve a intentarlo solo.</li>
+        <li><strong>Comprobaciones antes de enviar:</strong> NIF válido, dirección completa, límite
+          de la factura simplificada, ventas a Canarias, Ceuta y Melilla, totales que cuadran y
+          clases de impuesto sin asignar. Lo que no pasa, queda bloqueado con el motivo.</li>
+        <li><strong>En la cuenta del cliente:</strong> número de factura, PDF y enlace de
+          verificación de la AEAT.</li>
+        <li><strong>En el panel de administración:</strong> estado de cada documento, motivo de los
+          bloqueos, avisos y reenvío manual.</li>
+        <li>Textos del módulo en español e inglés.</li>
+      </ul>
+    </section>
+
+    <section id="que-no-hace">
+      <h2>Qué no hace</h2>
+      <ul>
+        <li>El sistema de facturación es <strong>Quaderno</strong>: genera los registros de
+          facturación, los firma y los envía a la AEAT. El módulo no genera registros; pasa los
+          datos de Magento a Quaderno y muestra el resultado.</li>
+        <li>Necesita una cuenta de Quaderno de pago
+          (<a href="https://support.quaderno.io/article/492-plans-pricing">planes desde 49&nbsp;€/mes</a>)
+          con Verifactu activado.</li>
+        <li>No cubre los territorios forales (TicketBAI en el País Vasco, sistema propio de Navarra).
+          Las empresas acogidas al SII no están obligadas a Verifactu.</li>
+        <li>No modifica los emails de factura de Magento en esta versión: la lista de instalación
+          explica qué hacer con ellos.</li>
+      </ul>
+    </section>
+
+    <section id="requisitos">
+      <h2>Requisitos</h2>
+      <dl class="facts">
+        <dt>Magento</dt><dd>Open Source 2.4.7 o 2.4.8 (Adobe Commerce: sin probar)</dd>
+        <dt>PHP</dt><dd>8.2 – 8.4, según la versión de Magento</dd>
+        <dt>Quaderno</dt><dd>cuenta con Verifactu activado y certificado digital</dd>
+      </dl>
+    </section>
+
+    <section id="instalacion">
+      <h2>Instalación</h2>
+<pre><code>composer require normaro/module-verifactu
+bin/magento module:enable Normaro_Verifactu
+bin/magento setup:upgrade
+bin/magento setup:di:compile</code></pre>
+      <p>Configuración en <em>Stores › Configuration › Sales › Verifactu</em>. Antes de pasar a
+        producción, siga la
+        <a href="https://github.com/normaro/magento-verifactu/blob/main/module/docs/install-checklist.md">lista
+        de instalación</a> y el
+        <a href="https://github.com/normaro/magento-verifactu/blob/main/module/README.md">README</a>
+        (en inglés).</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Necesita ayuda con la instalación o la configuración del IVA? Escríbanos a
+        <a href="mailto:support@normaro.es">support@normaro.es</a>.</p>
+      <p>Errores y propuestas:
+        <a href="https://github.com/normaro/magento-verifactu/issues">GitHub Issues</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>Normaro · Alicante · <a href="aviso-legal/">Aviso legal y privacidad</a> ·
+        Módulo bajo licencia <a href="https://opensource.org/license/osl-3-0-php">OSL-3.0</a></p>
+      <p class="small">Magento y Adobe Commerce son marcas de Adobe Inc. Quaderno es una marca de su
+        titular. Normaro no está afiliado a Adobe ni a Quaderno. Este sitio no usa cookies.</p>
+    </div>
+  </footer>
+</body>
+</html>
