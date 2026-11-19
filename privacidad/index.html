@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacidad · Normaro</title>
+  <meta name="description" content="Privacidad en Normaro: qué hacen con los datos personales el sitio normaro.es y el módulo Verifactu para Magento 2.">
+  <link rel="canonical" href="https://normaro.es/privacidad/">
+  <link rel="alternate" hreflang="es" href="https://normaro.es/privacidad/">
+  <link rel="alternate" hreflang="en" href="https://normaro.es/privacy/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/">normaro<span>.</span></a>
+      <nav><a href="/privacy/" hreflang="en" lang="en">English</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>Privacidad</h1>
+      <p class="muted">Última actualización: 19 de noviembre de 2026</p>
+    </div>
+
+    <section>
+      <h2>Este sitio web</h2>
+      <ul>
+        <li>Sin cookies, sin formularios, sin analítica, sin scripts ni fuentes de terceros.</li>
+        <li>El sitio se aloja en GitHub Pages. GitHub puede registrar datos técnicos de cada
+          petición, como su dirección IP, según su propia
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">declaración de privacidad</a>.</li>
+        <li>Si escribe a <a href="mailto:support@normaro.es">support@normaro.es</a>, su dirección y su
+          mensaje se usan solo para responderle y no se ceden a nadie. El correo llega a través de
+          <a href="https://forwardemail.net/en/privacy">Forward Email</a> al buzón desde el que
+          respondemos (Gmail, Google). Lo conservamos solo mientras lo requiera la conversación.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>El módulo Verifactu para Magento 2</h2>
+      <ul>
+        <li>El módulo no envía ningún dato a Normaro. No tiene telemetría ni hace peticiones a
+          normaro.es.</li>
+        <li>Para emitir las facturas, la tienda envía los datos de la factura (nombre del cliente,
+          empresa, NIF o número de IVA, dirección de facturación, email, líneas e importes del
+          pedido, forma de pago, números de pedido y de factura) a su propia cuenta de Quaderno.
+          Esto se hace en el marco del contrato de la tienda con Quaderno, que trata los datos según
+          su <a href="https://quaderno.io/legal/privacy/">política de privacidad</a>. Normaro no
+          tiene acceso a esa cuenta ni a esos datos.</li>
+        <li>El número de factura de Quaderno, el estado y los enlaces se guardan en la propia base de
+          datos de Magento de la tienda.</li>
+        <li>El registro de depuración (<code>var/log/verifactu.log</code>, solo si la tienda lo
+          activa) se queda en el servidor de la tienda. La clave de API nunca se escribe en él, y los
+          NIF y números de IVA aparecen enmascarados.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+      <p>Preguntas sobre privacidad, o solicitudes de acceso o supresión de sus mensajes:
+        <a href="mailto:support@normaro.es">support@normaro.es</a>. También puede reclamar ante la
+        <a href="https://www.aepd.es/">Agencia Española de Protección de Datos (AEPD)</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>Normaro · Proyecto de código abierto bajo licencia
+        <a href="https://opensource.org/license/osl-3-0-php">OSL-3.0</a> ·
+        <a href="/privacidad/">Privacidad</a></p>
+    </div>
+  </footer>
+</body>
+</html>

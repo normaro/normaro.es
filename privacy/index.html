@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy · Normaro</title>
+  <meta name="description" content="Privacy at Normaro: what the normaro.es website and the Verifactu extension for Magento 2 do with personal data.">
+  <link rel="canonical" href="https://normaro.es/privacy/">
+  <link rel="alternate" hreflang="en" href="https://normaro.es/privacy/">
+  <link rel="alternate" hreflang="es" href="https://normaro.es/privacidad/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="/">normaro<span>.</span></a>
+      <nav><a href="/privacidad/" hreflang="es" lang="es">Español</a></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>Privacy</h1>
+      <p class="muted">Last updated: 19 November 2026</p>
+    </div>
+
+    <section>
+      <h2>This website</h2>
+      <ul>
+        <li>No cookies, no forms, no analytics, no third-party scripts or fonts.</li>
+        <li>The site is hosted on GitHub Pages. GitHub may log technical data of each request, such
+          as your IP address, under its own
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>.</li>
+        <li>If you write to <a href="mailto:support@normaro.es">support@normaro.es</a>, we use your
+          address and your message only to answer you, and we do not pass them on to anyone. The
+          mail is delivered through <a href="https://forwardemail.net/en/privacy">Forward Email</a>
+          to the mailbox we answer from (Gmail, Google). We keep it only as long as the conversation
+          needs.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>The Verifactu extension for Magento 2</h2>
+      <ul>
+        <li>The extension sends no data to Normaro. It has no telemetry and makes no requests to
+          normaro.es.</li>
+        <li>To issue invoices, the shop sends the invoice data (customer name, company, NIF or VAT
+          number, billing address, email, order lines and amounts, payment method, order and invoice
+          numbers) to the shop's own Quaderno account. This happens under the shop's contract with
+          Quaderno, and Quaderno processes the data under its
+          <a href="https://quaderno.io/legal/privacy/">privacy policy</a>. Normaro has no access to
+          that account or that data.</li>
+        <li>The Quaderno invoice number, status and links are stored in the shop's own Magento
+          database.</li>
+        <li>The debug log (<code>var/log/verifactu.log</code>, only when the shop turns debug
+          logging on) stays on the shop's server. The API key is never written to it, and NIF and
+          VAT numbers are masked.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Questions about privacy, or a request to access or delete your messages:
+        <a href="mailto:support@normaro.es">support@normaro.es</a>. You can also complain to the
+        Spanish data protection authority, <a href="https://www.aepd.es/">AEPD</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <p>Normaro · Open source project under the
+        <a href="https://opensource.org/license/osl-3-0-php">OSL-3.0</a> license ·
+        <a href="/privacy/">Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>
